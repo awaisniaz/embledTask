@@ -1,0 +1,138 @@
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #f3f6fa;
+    height: 810px;
+
+    .content-container{
+        width: 55%;
+        //background: red;
+        padding: 30px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        .ant-btn{
+            border-radius: 5px;
+            background: #1890ff;
+            align-items: center;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            width: fit-content;
+            height: 63px;
+            font-weight: bold;
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+            column-gap: 5px;
+            padding-top: 3px;
+        }
+
+        .input-container{
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            height: 200px;
+            margin: 15px 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            align-items: flex-start;
+
+            box-shadow: 3px 5px 5px 4px rgba(233,235,239,0.84);
+-webkit-box-shadow: 3px 5px 5px 4px rgba(233,235,239,0.84);
+-moz-box-shadow: 3px 5px 5px 4px rgba(233,235,239,0.84);
+h2{
+    font-weight: bold;
+}
+            .ant-input{
+                border-radius: 10px !important;
+            }
+            .action-container{
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                column-gap: 10px;
+                margin-top: 15px;
+                .ant-btn{
+                    height: 40px;
+                    font-weight: bold;
+                    width: fit-content;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .create{
+                    background: #27ae60;
+                    color: white;
+                }
+                .cancel{
+                    background: transparent;
+                    color: black;
+                }
+            }
+
+        }
+        .topic-container{
+            height: calc(100% - 20px);
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow: auto;
+            row-gap: 10px;
+            margin-top: 10px;
+            .topic{
+                width: 100%;
+                display: flex;
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+                height: 200px;
+                flex-direction: column;
+                row-gap: 10px;
+                align-items: flex-start;
+                box-shadow: 3px 5px 5px 4px rgba(233,235,239,0.84);
+                -webkit-box-shadow: 3px 5px 5px 4px rgba(233,235,239,0.84);
+                -moz-box-shadow: 3px 5px 5px 4px rgba(233,235,239,0.84);
+                h3{
+                    font-weight: bold;
+                }
+                .rating-container{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    row-gap: 2px;
+                    align-items: flex-start;
+                }
+                .avatar-container{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 0;
+                    .avatar-logo{
+                        display: flex;
+                        column-gap: 5px;
+                        align-items: center;
+                        p{
+                            margin: 0;
+                        }
+
+                    }
+                    .comment{
+                        display: flex;
+                        column-gap: 5px;
+                        align-items: center;
+                        p{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

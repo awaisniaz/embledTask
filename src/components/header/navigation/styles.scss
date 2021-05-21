@@ -6,8 +6,17 @@
     box-shadow: 0px 6px 5px -1px rgba(194,192,192,0.82);
 -webkit-box-shadow: 0px 6px 5px -1px rgba(194,192,192,0.82);
 -moz-box-shadow: 0px 6px 5px -1px rgba(194,192,192,0.82);
+column-gap: 5px;
 
-.ant-tabs-top > .ant-tabs-nav::before{
-    border-bottom: none;
+.ant-btn{
+    border:none !important;
+    background-color: transparent;
+    font-weight: bold;
+    height: 100%;
+    
+}
+.active{
+    border-bottom: 2px solid #1890ff !important;
+    color: #1890ff;
 }
 }

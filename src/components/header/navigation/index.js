@@ -1,22 +1,31 @@
 import React from 'react'
 import './styles.scss'
-import { Tabs } from 'antd'
+import { Button } from 'antd'
 class Navigation extends React.Component {
     render() {
-        const { TabPane } = Tabs;
+        const action = [{
+            title: 'Open',
+            class: 'active',
+            action: () => {
+            }
+        },
+        {
+            title: 'Felllow-ups',
+            class: '',
+            action: () => {
+            }
+        },
+        {
+            title: 'Resolutions',
+            class: '',
+            action: () => {
+            }
+        }]
         return (
             <div className="navigation-header">
-                <Tabs defaultActiveKey="1">
-                    <TabPane tab="Open" key="1">
-                        Content of Tab Pane 1
-    </TabPane>
-                    <TabPane tab="Fellow-up" key="2">
-                        Content of Tab Pane 2
-    </TabPane>
-                    <TabPane tab="Resolution" key="3">
-                        Content of Tab Pane 3
-    </TabPane>
-                </Tabs>
+                {action.map(item => {
+                    return <Button className={item.class} key={item.title}>{item.title}</Button>
+                })}
             </div>
         )
     }

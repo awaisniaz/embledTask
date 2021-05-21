@@ -1,7 +1,9 @@
 import React from 'react'
 import './styles.scss'
 import { Avatar } from 'antd'
-import { HomeOutlined, ArrowRightOutlined, ThunderboltOutlined, CaretDownOutlined, EnvironmentOutlined } from '@ant-design/icons';
+import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore';
+import { HomeOutlined, ArrowRightOutlined, ThunderboltOutlined } from '@ant-design/icons';
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 class Login extends React.Component {
     render() {
         return (
@@ -16,12 +18,12 @@ class Login extends React.Component {
                         <div className="arrow"><ArrowRightOutlined /></div>
                         <div className="Extra"><ThunderboltOutlined /></div>
                         <div className="Text"><h2>Design Team</h2></div>
-                        <div className="scroll"><CaretDownOutlined /></div>
+                        <div className="scroll"><UnfoldMoreIcon /></div>
                     </div>
 
                 </div>
                 <div className="login-indicator">
-                    <div><EnvironmentOutlined /></div>
+                    <div style={{ marginTop: '5px', cursor: 'pointer' }}><NotificationsNoneIcon /></div>
                     <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
 
                 </div>
