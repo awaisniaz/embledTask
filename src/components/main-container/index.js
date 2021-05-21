@@ -38,7 +38,7 @@ class MainContainer extends React.Component {
                     <div className="topic-container">
                         {
                             topicData.map(item => {
-                                return <div className="topic">
+                                return <div className="topic" key={item.title}>
                                     <div className="rating-container"><h3>{item.title}</h3>
                                         <Rate style={{ color: '#1890ff' }} character={<FiberManualRecordIcon />} count={item.total} value={item.followUp} />
                                     </div>

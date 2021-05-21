@@ -1,34 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles.scss'
-import { Button } from 'antd'
-class Navigation extends React.Component {
-    render() {
-        const action = [{
-            title: 'Open',
-            class: 'active',
-            action: () => {
-            }
+const Navigation = () => {
+    const [name, setName] = useState('open')
+    const action = [{
+        title: 'Open',
+        name: 'open',
+        action: () => {
         },
-        {
-            title: 'Felllow-ups',
-            class: '',
-            action: () => {
-            }
+        id: 1
+    },
+    {
+        title: 'Felllow-ups',
+        name: 'fellowup',
+        action: () => {
         },
-        {
-            title: 'Resolutions',
-            class: '',
-            action: () => {
-            }
-        }]
-        return (
-            <div className="navigation-header">
-                {action.map(item => {
-                    return <Button className={item.class} key={item.title}>{item.title}</Button>
-                })}
-            </div>
-        )
-    }
+        id: 2
+    },
+    {
+        title: 'Resolutions',
+        name: 'resolutions',
+        action: () => {
+        },
+        id: 3
+    }]
+    return (
+        <div className="navigation-header">
+            {action.map(item => {
+                return <button className={`ant-btn ${name == item.name ? 'active' : ''}`} key={item.title} name={item.name} onClick={(e) => {
+                    setName(e.target.name)
+                }}>{item.title}</button>
+            })}
+        </div>
+    )
 }
+
 
 export default Navigation
